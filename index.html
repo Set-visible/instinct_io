@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>instinct.io</title>
+    </head>
+    <body>
+        <h1 id="titleText">
+            시선은 답을 알고있다
+        </h1>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>
+                    instinct.io는 뭘 먹어야할지<br />한참동안 고민하는 사람들을 위해 만들어
+                    졌습니다.
+                </h2>
+                <p>
+                    테스트를 시작하게되면, <br />좌우에 서로다른 음식사진이 제시됩니다.
+                    웹사이트에서는 웹캠을 사용해 당신의 시선을 추적하게됩니다.<br />
+                    추적된 데이터를 바탕으로 어느음식에 더 시선이 많이 갔는지 측정합니다.<br />
+                    서로다른 이미지를 3초간 표시합니다.<br />일반적인 시선추적은 사용자별로 정확도
+                    보정작업을 해야 하지만,<br />
+                    이 사이트에선 시선이 왼쪽인지, 오른쪽인지만을 판별하기때문에 별도의 보정작업은
+                    없습니다.<br />결과를 보려면 측정 종료버튼을 누르세요
+                </p>
+            </div>
+        </div>
+        <style>
+            .modal {
+                display: flex;
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0); /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 3px solid #888;
+                width: 50%;
+                height: auto;
+                border-radius: 30px;
+                transform: translateY(-80%); /*모달 컨텐츠 위치 보정*/
+            }
+
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+    </body>
+</html>
+
+<script>
+	    var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName('close')[0];
+	var str = "./New.html"
+	span.onclick = function () {
+        modal.style.display = 'none';
+		location.replace(str);
+		
+    };
+</script>
